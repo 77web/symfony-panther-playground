@@ -65,6 +65,9 @@
         }
     },
     "require-dev": {
-        "symfony/panther": "^1.0"
+        "symfony/browser-kit": "^5.2",
+        "symfony/css-selector": "^5.2",
+        "symfony/panther": "^1.0",
+        "symfony/phpunit-bridge": "^5.2"
     }
 }
