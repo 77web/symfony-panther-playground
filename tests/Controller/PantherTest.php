@@ -13,7 +13,10 @@ class PantherTest extends PantherTestCase
         $client = static::createPantherClient();
         $crawler = $client->request('GET', '/');
 
-        $this->assertTrue($crawler->filter('h1')->text() === 'HomeController');
+        $this->assertEquals('HomeController', $crawler->filter('h1')->text());
+
+        $crawler->selectButton('hello')->click();
+        $this->assertEquals('hello hello!', $crawler->filter('h1')->text());
 
         $client->takeScreenshot('home.png');
     }

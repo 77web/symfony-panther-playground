@@ -9,8 +9,8 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>{{ controller_name }}</h1>
+    <h1 id="my-title">{{ controller_name }}</h1>
 
-    <button onclick="alert('hello panther!');">hello</button>
+    <button onclick="document.getElementById('my-title').innerText = 'hello hello!';">hello</button>
 </div>
 {% endblock %}
